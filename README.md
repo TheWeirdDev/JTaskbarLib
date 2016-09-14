@@ -5,6 +5,7 @@ The first library for using windows Taskbar and window features in Java
 #Requirements
 
 Windows 7 , 8 , 8.1 , 10
+java 7+
 
 #How to use
 
@@ -36,9 +37,9 @@ controller.setWindowOpacity(180);
 
 #Screenshots
 
-![Screenshot1](http://www.axgig.com/images/09966399837368348184.png)
-![Screenshot2](http://www.axgig.com/images/57405352266954844994.png)
-![Screenshot3](http://www.axgig.com/images/64234434841136641045.gif)
+![Screenshot1](http://www.axgig.com/images/64234434841136641045.gif)
+![Screenshot2](http://www.axgig.com/images/09966399837368348184.png)
+![Screenshot3](http://www.axgig.com/images/57405352266954844994.png)
 ![Screenshot4](http://www.axgig.com/images/77640314593542747545.png)
 ![Screenshot5](http://www.axgig.com/images/86958911908320093649.png)
 
@@ -46,8 +47,8 @@ controller.setWindowOpacity(180);
 #How to compile c++ code in windows
 
 ```bash
-g++ --shared -o JTaskbar32.dll dll.cpp -lole32  -luuid
+g++ --shared -o JTaskbar.dll dll.cpp -lole32  -luuid
 ```
 
 # Licence
-JTaskbar is licenced under [GPL3](https://github.com/alireza6677/JTaskbarlLib/blob/master/LICENSE)
+JTaskbar is licenced under [GPL3](https://github.com/alireza6677/JTaskbarLib/blob/master/LICENSE)
