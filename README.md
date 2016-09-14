@@ -30,7 +30,7 @@ controller.setProgressState(JProgressState.NORMAL);
 controller.setProgressValue(50);
 controller.setThumbnailTooltip("Test !");
 controller.flashWindow();
-controller.setWindowOpacity(180);
+controller.setWindowOpacity(180); // (0 - 255)
 
 ```
 #Download Library
@@ -52,4 +52,4 @@ g++ --shared -o JTaskbar.dll dll.cpp -lole32  -luuid
 ```
 
 # Licence
-JTaskbar is licenced under [GPL3](https://github.com/alireza6677/JTaskbarLib/blob/master/LICENSE)
+JTaskbar is licenced under [GPL3](https://github.com/alireza6677/JTaskbarLib/blob/master/LICENCE)
