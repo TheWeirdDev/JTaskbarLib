@@ -33,6 +33,9 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 
 import java.awt.Font;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
 import javax.swing.JLabel;
 
 /**
@@ -104,7 +107,6 @@ public class Main extends javax.swing.JFrame {
 
         initComponents();
         setTitle("Sample JTaskbarLib");
-
         setVisible(true); 
         j = new JTaskbarController(this);
         j.setProgressState(JProgressState.NORMAL);
@@ -112,7 +114,8 @@ public class Main extends javax.swing.JFrame {
         j.setThumbnailTooltip("Test !");
       //  j.setThumbnailClip(50, 50, 50, 50);
         valueSlider.setValue(50);
-        taskbarProgress.setValue(50);
+        taskbarProgress.setValue(50);       
+
     }
 
     private void initComponents() {

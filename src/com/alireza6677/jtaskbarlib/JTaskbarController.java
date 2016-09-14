@@ -7,8 +7,12 @@
 package com.alireza6677.jtaskbarlib;
 
 import com.sun.jna.Native;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
+
 import javax.swing.JFrame;
 
 /**
@@ -27,14 +31,29 @@ public class JTaskbarController {
     public JTaskbarController(JFrame j){
         title = j.getTitle();
         //String path =  new File(JTaskbarController.class.getProtectionDomain().getCodeSource().getLocation().getPath()).getParentFile().getPath();
+        loadLib();
+        reset(max,j);
+        jf = j;
+        
+        j.addPropertyChangeListener(new PropertyChangeListener() {
+			@Override
+			public void propertyChange(PropertyChangeEvent arg0) {
+				editTitle(jf);
+			}
+		});
+    }
+    
+    private void loadLib(){
+    	String arch = "";
+    	if(System.getProperty("sun.arch.data.model").equals("32"))
+    		arch = "32";
+    	
         try {
-			tp = (JTaskbarProgress) Native.loadLibrary(Utils.tempJarDll("/lib/JTaskbarLib.dll").getPath(), JTaskbarProgress.class);
+			tp = (JTaskbarProgress) Native.loadLibrary(Utils.tempJarDll("/lib/JTaskbarLib"+arch+".dll").getAbsolutePath(), JTaskbarProgress.class);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
 		}
-        reset(max,j);
-        jf = j;
     }
     
     public JProgressState getProgressState(){
@@ -62,12 +81,7 @@ public class JTaskbarController {
     }
     
     private void resetNative(){
-        try {
- 			tp = (JTaskbarProgress) Native.loadLibrary(Utils.tempJarDll("/lib/JTaskbarLib.dll").getPath(), JTaskbarProgress.class);
- 		} catch (IOException e) {
- 			e.printStackTrace();
- 			System.exit(1);
- 		}
+    	loadLib();
     }
     
     public void setMax(int m){
