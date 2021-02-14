@@ -43,11 +43,11 @@ controller.setWindowOpacity(180); // (0 - 255)
 
 #Screenshots
 
-![Screenshot1](http://www.axgig.com/images/64234434841136641045.gif)
-![Screenshot2](http://www.axgig.com/images/09966399837368348184.png)
-![Screenshot3](http://www.axgig.com/images/57405352266954844994.png)
-![Screenshot4](http://www.axgig.com/images/77640314593542747545.png)
-![Screenshot5](http://www.axgig.com/images/86958911908320093649.png)
+![JTaskbarLib_Screenshot1](screenshots/3.gif)
+![JTaskbarLib_Screenshot2](screenshots/1.png)
+![JTaskbarLib_Screenshot3](screenshots/2.png)
+![JTaskbarLib_Screenshot4](screenshots/4.png)
+![JTaskbarLib_Screenshot5](screenshots/5.png)
 
 
 #How to compile c++ code in windows
@@ -57,4 +57,4 @@ g++ --shared -o JTaskbar.dll dll.cpp -lole32  -luuid
 ```
 
 # Licence
-JTaskbar is licenced under [GPL3](https://github.com/alireza6677/JTaskbarLib/blob/master/LICENCE)
+JTaskbar is licenced under [BSD](https://github.com/alireza6677/JTaskbarLib/blob/master/LICENCE) license
