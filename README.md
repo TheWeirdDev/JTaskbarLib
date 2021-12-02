@@ -1,14 +1,14 @@
-#JTaskbarLib
+# JTaskbarLib
 
 The first library for using windows Taskbar and window features in Java
 
-#Requirements
+# Requirements
 
 Windows 7 , 8 , 8.1 , 10
 
 java 7+
 
-#How to use
+# How to use
 
 First add library source files to your project then make sure user uses windows and then initialize the controller in your JFrame :
 
@@ -38,10 +38,10 @@ controller.flashWindow();
 controller.setWindowOpacity(180); // (0 - 255)
 
 ```
-#Download Library
+# Download Library
 [Download](https://github.com/alireza6677/JTaskbarLib/raw/master/dist/JTaskbarLib.jar)
 
-#Screenshots
+# Screenshots
 
 ![JTaskbarLib_Screenshot1](screenshots/3.gif)
 ![JTaskbarLib_Screenshot2](screenshots/1.png)
@@ -50,7 +50,7 @@ controller.setWindowOpacity(180); // (0 - 255)
 ![JTaskbarLib_Screenshot5](screenshots/5.png)
 
 
-#How to compile c++ code in windows
+# How to compile c++ code in windows
 
 ```bash
 g++ --shared -o JTaskbar.dll dll.cpp -lole32  -luuid
